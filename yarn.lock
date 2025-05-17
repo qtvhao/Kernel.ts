@@ -97,7 +97,7 @@ __metadata:
 
 "support.ts@github:qtvhao/support.ts":
   version: 1.0.0
-  resolution: "support.ts@https://github.com/qtvhao/support.ts.git#commit=0139e9b8a1e5d9dd655ffd6fcf37768503720fb3"
+  resolution: "support.ts@https://github.com/qtvhao/support.ts.git#commit=e6c61a7ec9f1340e2dd9a077f35f0cafce761ee9"
   dependencies:
     contracts.ts: "github:qtvhao/Contracts.ts"
     inversify: ^7.5.1
