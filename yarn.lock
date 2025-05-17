@@ -56,21 +56,21 @@ __metadata:
 
 "contracts.ts@github:qtvhao/Contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@git+ssh://git@github.com/qtvhao/Contracts.ts.git#commit=9da55856bc4da8943b580022d5794fb7c5f3b635"
+  resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=2001cbad41db02476fc3d30ec5ce4f1ffffed7b1"
   dependencies:
     inversify: ^7.5.1
     support.ts: "github:qtvhao/Support.ts"
-  checksum: 56527db3093ebd83744122e2009e4ad07b543ea933d24e29afbf7d4b6beb7bb002d765b462f4158b01dfa3368f709e3d46da698a95c74ef423b0936f06c98e1a
+  checksum: 4a535f162a40a85abf737cc8076672b88bd02e140941eca2a5785014760fef1a94268990ed6b1865497fe75914f04fb607fbc2ed12ef49689060f67bb593620b
   languageName: node
   linkType: hard
 
 "contracts.ts@github:qtvhao/contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@git+ssh://git@github.com/qtvhao/contracts.ts.git#commit=9da55856bc4da8943b580022d5794fb7c5f3b635"
+  resolution: "contracts.ts@https://github.com/qtvhao/contracts.ts.git#commit=2001cbad41db02476fc3d30ec5ce4f1ffffed7b1"
   dependencies:
     inversify: ^7.5.1
     support.ts: "github:qtvhao/Support.ts"
-  checksum: 56527db3093ebd83744122e2009e4ad07b543ea933d24e29afbf7d4b6beb7bb002d765b462f4158b01dfa3368f709e3d46da698a95c74ef423b0936f06c98e1a
+  checksum: 4a535f162a40a85abf737cc8076672b88bd02e140941eca2a5785014760fef1a94268990ed6b1865497fe75914f04fb607fbc2ed12ef49689060f67bb593620b
   languageName: node
   linkType: hard
 
@@ -99,7 +99,7 @@ __metadata:
 
 "support.ts@github:qtvhao/Support.ts":
   version: 1.0.0
-  resolution: "support.ts@git+ssh://git@github.com/qtvhao/Support.ts.git#commit=444ed77b7c017e24084af86cb83b111cc0b75483"
+  resolution: "support.ts@https://github.com/qtvhao/Support.ts.git#commit=444ed77b7c017e24084af86cb83b111cc0b75483"
   dependencies:
     contracts.ts: "github:qtvhao/Contracts.ts"
     inversify: ^7.5.1
@@ -109,7 +109,7 @@ __metadata:
 
 "support.ts@github:qtvhao/support.ts":
   version: 1.0.0
-  resolution: "support.ts@git+ssh://git@github.com/qtvhao/support.ts.git#commit=444ed77b7c017e24084af86cb83b111cc0b75483"
+  resolution: "support.ts@https://github.com/qtvhao/support.ts.git#commit=444ed77b7c017e24084af86cb83b111cc0b75483"
   dependencies:
     contracts.ts: "github:qtvhao/Contracts.ts"
     inversify: ^7.5.1
