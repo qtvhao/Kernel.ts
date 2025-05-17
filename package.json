@@ -21,5 +21,8 @@
   "dependencies": {
     "inversify": "^7.5.1",
     "support.ts": "github:qtvhao/support.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18"
   }
 }

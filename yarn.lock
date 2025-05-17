@@ -54,6 +54,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^22.15.18":
+  version: 22.15.18
+  resolution: "@types/node@npm:22.15.18"
+  dependencies:
+    undici-types: ~6.21.0
+  checksum: 16fb2c1f7be4156578648bfe074c856fca309ac66b9b74f9c5887ce778ce6cbd06d2883eaa397837e3628cddb02a5b0859764c5db0ea24f55f0cfbf54cca06fc
+  languageName: node
+  linkType: hard
+
 "contracts.ts@github:qtvhao/Contracts.ts":
   version: 1.0.0
   resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=785e03db9d5cac8bda391aaabe5d79da8757c426"
@@ -80,6 +89,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "kernel.ts@workspace:."
   dependencies:
+    "@types/node": ^22.15.18
     inversify: ^7.5.1
     support.ts: "github:qtvhao/support.ts"
   languageName: unknown
@@ -92,5 +102,12 @@ __metadata:
     contracts.ts: "github:qtvhao/Contracts.ts"
     inversify: ^7.5.1
   checksum: 80a167517c3bf33866c0bf9eb9ffcab52c168621e051c5d52cc62b87581f4569a312a7d41676a80cc610226e64fcd0b7f00832fdcbd5bb32d61d4c635454dfd6
+  languageName: node
+  linkType: hard
+
+"undici-types@npm:~6.21.0":
+  version: 6.21.0
+  resolution: "undici-types@npm:6.21.0"
+  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
   languageName: node
   linkType: hard
