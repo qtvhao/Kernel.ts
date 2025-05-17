@@ -18,13 +18,13 @@ export class Application implements ApplicationContract {
 
     constructor(
         private readonly paths: {
-            base: string;
-            config: string;
-            database: string;
-            resources: string;
-            storage: string;
-            lang: string;
-            public: string;
+            base: string;        // Root directory of the application
+            config: string;      // Directory containing configuration files
+            database: string;    // Database-related files like migrations, seeds
+            resources: string;   // Templates, views, and other raw resources
+            storage: string;     // Temporary files, uploads, logs, cache, etc.
+            lang: string;        // Localization files for internationalization
+            public: string;      // Public assets accessible from the web (CSS, JS, images)
         },
         private env: string,
         private debug: boolean,
