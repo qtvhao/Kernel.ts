@@ -1,0 +1,25 @@
+{
+  "name": "kernel.ts",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/qtvhao/Kernel.ts#readme",
+  "bugs": {
+    "url": "https://github.com/qtvhao/Kernel.ts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qtvhao/Kernel.ts.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "contracts.ts": "github:qtvhao/contracts.ts",
+    "inversify": "^7.5.1",
+    "support.ts": "github:qtvhao/support.ts"
+  }
+}
