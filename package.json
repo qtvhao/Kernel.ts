@@ -12,9 +12,10 @@
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
-  "main": "index.js",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
+    "postinstall": "npx tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
