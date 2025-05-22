@@ -1,11 +1,12 @@
 import 'reflect-metadata';
+import { IServiceProvider } from 'contracts.ts';
 import { Application as IApplication } from 'contracts.ts';
 
 export class AppBootstrapper {
   private readonly app: IApplication;
-  private readonly providers: any[];
+  private readonly providers: IServiceProvider[];
 
-  constructor(app: IApplication, providers: any[]) {
+  constructor(app: IApplication, providers: IServiceProvider[]) {
     this.app = app;
     this.providers = providers;
   }
@@ -20,8 +21,10 @@ export class AppBootstrapper {
   }
 
   private registerCore(): AppBootstrapper {
-    for (const Provider of this.providers) {
-      new Provider(this.app).register();
+    for (const providerInstance of this.providers) {
+      providerInstance.register();
+      providerInstance.callBootingCallbacks?.();
+      providerInstance.callBootedCallbacks?.();
     }
     return this;
   }
