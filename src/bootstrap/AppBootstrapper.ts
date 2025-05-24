@@ -12,21 +12,42 @@ export class AppBootstrapper {
   }
 
   public bootstrap(): AppBootstrapper {
-    return this
-      .registerCore()
+    this.registerCore()
       .registerApplication()
       .registerDomain()
       .registerPersistence()
       .registerMessaging();
+
+    this.callBootingCallbacks();
+    this.bootProviders();
+    this.callBootedCallbacks();
+
+    return this;
   }
 
   private registerCore(): AppBootstrapper {
-    for (const providerInstance of this.providers) {
-      providerInstance.register();
-      providerInstance.callBootingCallbacks?.();
-      providerInstance.callBootedCallbacks?.();
+    for (const provider of this.providers) {
+      provider.register();
     }
     return this;
+  }
+
+  private callBootingCallbacks(): void {
+    for (const provider of this.providers) {
+      provider.callBootingCallbacks();
+    }
+  }
+
+  private bootProviders(): void {
+    for (const provider of this.providers) {
+      provider.boot?.();
+    }
+  }
+
+  private callBootedCallbacks(): void {
+    for (const provider of this.providers) {
+      provider.callBootedCallbacks();
+    }
   }
 
   private registerApplication(): AppBootstrapper {
