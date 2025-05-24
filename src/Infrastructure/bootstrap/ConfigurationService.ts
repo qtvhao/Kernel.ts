@@ -1,4 +1,7 @@
 import { IConfigurationService } from "contracts.ts";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export class ConfigurationService implements IConfigurationService {
     getEventBusDriver(): string {

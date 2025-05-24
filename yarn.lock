@@ -81,6 +81,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.5.0":
+  version: 16.5.0
+  resolution: "dotenv@npm:16.5.0"
+  checksum: 6543fe87b5ddf2d60dd42df6616eec99148a5fc150cb4530fef5bda655db5204a3afa0e6f25f7cd64b20657ace4d79c0ef974bec32fdb462cad18754191e7a90
+  languageName: node
+  linkType: hard
+
 "inversify@npm:^7.5.1":
   version: 7.5.1
   resolution: "inversify@npm:7.5.1"
@@ -100,6 +107,7 @@ __metadata:
   dependencies:
     "@types/node": ^22.15.18
     contracts.ts: "github:qtvhao/contracts.ts"
+    dotenv: ^16.5.0
     inversify: ^7.5.1
     support.ts: "github:qtvhao/support.ts"
   languageName: unknown
