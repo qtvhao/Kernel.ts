@@ -65,19 +65,19 @@ __metadata:
 
 "contracts.ts@github:qtvhao/Contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=b24e5dbd4ad27a7d457501b8eb78bb272373e00f"
+  resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=7178d79bc1d53ef1a636c96d008800a3d8d71207"
   dependencies:
     inversify: ^7.5.1
-  checksum: dc203a8a6fe1ed28efec2ba9ded5b910e9b0cfe2899a6e1d6cc6d86c2d28e32c16a5e0c7b5d7c2ba602e9d82b62f69449e7f399014a4d44872fc8acbed62e247
+  checksum: 90244def28256228b8bdb07447dae331e41df89a3939610eb6bacf7675270483f63545f3aff384aaba2964c5037511f5cc7642fb4dd7611f8655ff29f06220af
   languageName: node
   linkType: hard
 
 "contracts.ts@github:qtvhao/contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@https://github.com/qtvhao/contracts.ts.git#commit=b24e5dbd4ad27a7d457501b8eb78bb272373e00f"
+  resolution: "contracts.ts@https://github.com/qtvhao/contracts.ts.git#commit=7178d79bc1d53ef1a636c96d008800a3d8d71207"
   dependencies:
     inversify: ^7.5.1
-  checksum: dc203a8a6fe1ed28efec2ba9ded5b910e9b0cfe2899a6e1d6cc6d86c2d28e32c16a5e0c7b5d7c2ba602e9d82b62f69449e7f399014a4d44872fc8acbed62e247
+  checksum: 90244def28256228b8bdb07447dae331e41df89a3939610eb6bacf7675270483f63545f3aff384aaba2964c5037511f5cc7642fb4dd7611f8655ff29f06220af
   languageName: node
   linkType: hard
 
@@ -107,11 +107,11 @@ __metadata:
 
 "support.ts@github:qtvhao/support.ts":
   version: 1.0.0
-  resolution: "support.ts@https://github.com/qtvhao/support.ts.git#commit=33b5cb28b4b545a8df96ce4d806dd80bdb2f7c0f"
+  resolution: "support.ts@https://github.com/qtvhao/support.ts.git#commit=99c52de8c73db62b231093df053c864d5e44ff10"
   dependencies:
     contracts.ts: "github:qtvhao/Contracts.ts"
     inversify: ^7.5.1
-  checksum: 1c383b11a6788c5b2c8d0b02131d229ecf255d8f765066284480f5604abe9daeaffaf8fde1d2ad10e0ed3be69737ec5361b9a9e78343a7158adb890cfb1aebc6
+  checksum: 9fdadeebdbee3ee44e9b1a29172fc265e8bb6f78082535e14484d370e8bcab5d5e4fbac6c26cbb1f6776750478c5e077f6e26144019bbdb0e523e53a8351f09b
   languageName: node
   linkType: hard
 
