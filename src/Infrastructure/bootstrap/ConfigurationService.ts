@@ -24,9 +24,25 @@ export class ConfigurationService implements IConfigurationService {
         return process.env.KAFKA_GROUP_ID || "";
     }
 
+    getSupabaseUrl(): string {
+        this.ensureSupabaseVar("SUPABASE_URL");
+        return process.env.SUPABASE_URL!;
+    }
+
+    getSupabaseKey(): string {
+        this.ensureSupabaseVar("SUPABASE_KEY");
+        return process.env.SUPABASE_KEY!;
+    }
+
     private ensureKafkaVar(envVar: string): void {
         if (this.getEventBusDriver() === "kafka" && !process.env[envVar]) {
             throw new Error(`${envVar} must be set for Kafka driver`);
+        }
+    }
+
+    private ensureSupabaseVar(envVar: string): void {
+        if (this.getEventBusDriver() === "supabase" && !process.env[envVar]) {
+            throw new Error(`${envVar} must be set for Supabase driver`);
         }
     }
 }
