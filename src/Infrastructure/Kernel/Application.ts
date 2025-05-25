@@ -1,15 +1,15 @@
 import {
-    Container,
     BindingIdentifier,
     BindToFluentSyntax,
+    Container,
     GetOptions,
     OptionalGetOptions,
-    ServiceIdentifier
+    ServiceIdentifier,
 } from "inversify";
-import { Application as ApplicationContract } from 'contracts.ts'
-import { ServiceProvider } from 'support.ts'
+import { IApplication } from "contracts.ts";
+import { ServiceProvider } from "support.ts";
 
-export class Application implements ApplicationContract {
+export class Application implements IApplication {
     private container = new Container();
     private callbacks = {
         terminating: [] as Array<() => void | Promise<void>>,
@@ -18,53 +18,73 @@ export class Application implements ApplicationContract {
 
     constructor(
         private readonly paths: {
-            base: string;        // Root directory of the application
-            config: string;      // Directory containing configuration files
-            database: string;    // Database-related files like migrations, seeds
-            resources: string;   // Templates, views, and other raw resources
-            storage: string;     // Temporary files, uploads, logs, cache, etc.
-            lang: string;        // Localization files for internationalization
-            public: string;      // Public assets accessible from the web (CSS, JS, images)
+            base: string; // Root directory of the application
+            config: string; // Directory containing configuration files
+            database: string; // Database-related files like migrations, seeds
+            resources: string; // Templates, views, and other raw resources
+            storage: string; // Temporary files, uploads, logs, cache, etc.
+            lang: string; // Localization files for internationalization
+            public: string; // Public assets accessible from the web (CSS, JS, images)
         },
         private env: string,
         private debug: boolean,
-        private locale: string
+        private locale: string,
     ) {}
 
     bind<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T> {
         return this.container.bind(serviceIdentifier);
     }
 
-    get<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions | OptionalGetOptions): T | undefined {
+    get<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions | OptionalGetOptions,
+    ): T | undefined {
         if ((options as OptionalGetOptions)?.optional) {
-            return this.container.isBound(serviceIdentifier) ? this.container.get(serviceIdentifier) : undefined;
+            return this.container.isBound(serviceIdentifier)
+                ? this.container.get(serviceIdentifier)
+                : undefined;
         }
         return this.container.get(serviceIdentifier);
     }
 
-    getAll<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): T[] {
+    getAll<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions,
+    ): T[] {
         return this.container.getAll(serviceIdentifier);
     }
 
-    async getAllAsync<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions): Promise<T[]> {
+    async getAllAsync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions,
+    ): Promise<T[]> {
         return this.getAll(serviceIdentifier, options);
     }
 
-    async getAsync<T>(serviceIdentifier: ServiceIdentifier<T>, options?: GetOptions | OptionalGetOptions): Promise<T | undefined> {
+    async getAsync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+        options?: GetOptions | OptionalGetOptions,
+    ): Promise<T | undefined> {
         return this.get(serviceIdentifier, options);
     }
 
-    async rebind<T>(serviceIdentifier: ServiceIdentifier<T>): Promise<BindToFluentSyntax<T>> {
+    async rebind<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+    ): Promise<BindToFluentSyntax<T>> {
         this.container.unbind(serviceIdentifier);
         return this.bind(serviceIdentifier);
     }
 
-    rebindSync<T>(serviceIdentifier: ServiceIdentifier<T>): BindToFluentSyntax<T> {
+    rebindSync<T>(
+        serviceIdentifier: ServiceIdentifier<T>,
+    ): BindToFluentSyntax<T> {
         this.container.unbind(serviceIdentifier);
         return this.bind(serviceIdentifier);
     }
 
-    async unbind(identifier: BindingIdentifier | ServiceIdentifier): Promise<void> {
+    async unbind(
+        identifier: BindingIdentifier | ServiceIdentifier,
+    ): Promise<void> {
         this.container.unbind(identifier);
     }
 
@@ -76,13 +96,27 @@ export class Application implements ApplicationContract {
         this.container.unbind(identifier);
     }
 
-    basePath(): string { return this.paths.base; }
-    configPath(): string { return this.paths.config; }
-    databasePath(): string { return this.paths.database; }
-    resourcesPath(): string { return this.paths.resources; }
-    storagePath(): string { return this.paths.storage; }
-    langPath(): string { return this.paths.lang; }
-    publicPath(): string { return this.paths.public; }
+    basePath(): string {
+        return this.paths.base;
+    }
+    configPath(): string {
+        return this.paths.config;
+    }
+    databasePath(): string {
+        return this.paths.database;
+    }
+    resourcesPath(): string {
+        return this.paths.resources;
+    }
+    storagePath(): string {
+        return this.paths.storage;
+    }
+    langPath(): string {
+        return this.paths.lang;
+    }
+    publicPath(): string {
+        return this.paths.public;
+    }
 
     environment(): string {
         return this.env;
@@ -101,7 +135,8 @@ export class Application implements ApplicationContract {
     }
 
     runningInConsole(): boolean {
-        return typeof process !== "undefined" && !!process.stdout && !!process.stdin;
+        return typeof process !== "undefined" && !!process.stdout &&
+            !!process.stdin;
     }
 
     hasDebugModeEnabled(): boolean {

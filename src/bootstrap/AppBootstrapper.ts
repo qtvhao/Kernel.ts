@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { IServiceProvider } from 'contracts.ts';
-import { Application as IApplication } from 'contracts.ts';
+import { IApplication } from 'contracts.ts';
 
 export class AppBootstrapper {
   private readonly app: IApplication;
