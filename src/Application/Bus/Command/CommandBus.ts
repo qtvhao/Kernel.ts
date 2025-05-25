@@ -1,5 +1,3 @@
-// Kernel.ts/src/Application/Bus/Command/CommandBus.ts
-
 import { ICommand, ICommandHandlerResolver } from "contracts.ts";
 
 export class CommandBus {
