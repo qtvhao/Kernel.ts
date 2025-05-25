@@ -11,16 +11,16 @@ export class AppBootstrapper {
     this.providers = providers;
   }
 
-  public bootstrap(): AppBootstrapper {
+  public async bootstrap(): Promise<AppBootstrapper> {
     this.registerCore()
       .registerApplication()
       .registerDomain()
       .registerPersistence()
       .registerMessaging();
 
-    this.callBootingCallbacks();
-    this.bootProviders();
-    this.callBootedCallbacks();
+    await this.callBootingCallbacks();
+    await this.bootProviders();
+    await this.callBootedCallbacks();
 
     return this;
   }
@@ -32,21 +32,21 @@ export class AppBootstrapper {
     return this;
   }
 
-  private callBootingCallbacks(): void {
+  private async callBootingCallbacks(): Promise<void> {
     for (const provider of this.providers) {
-      provider.callBootingCallbacks();
+      await provider.callBootingCallbacks();
     }
   }
 
-  private bootProviders(): void {
+  private async bootProviders(): Promise<void> {
     for (const provider of this.providers) {
-      provider.boot?.();
+      await provider.boot?.();
     }
   }
 
-  private callBootedCallbacks(): void {
+  private async callBootedCallbacks(): Promise<void> {
     for (const provider of this.providers) {
-      provider.callBootedCallbacks();
+      await provider.callBootedCallbacks();
     }
   }
 
