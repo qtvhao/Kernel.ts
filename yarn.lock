@@ -65,19 +65,19 @@ __metadata:
 
 "contracts.ts@github:qtvhao/Contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=c14bba9f96f48f60c19558a8f02aceb2dbbf577f"
+  resolution: "contracts.ts@https://github.com/qtvhao/Contracts.ts.git#commit=3044408212cd57af2abba82510742cc1762ebcd7"
   dependencies:
     inversify: ^7.5.1
-  checksum: 2a00f7537b70b4cf60cfd921fabe450e82a99c3866d474ffb121c21468603e5022973d594b64f4fc521ef813f95ac2c1005a942ac3c0ffa7244a2506e1ba3379
+  checksum: a29e20f701cfa853dec123e25b6483c4421073d30e555635dcc4507109bf2ad6e7c7792c7dbc48dc0159cdcb292e0e0ac82a01f1045388918ad7bb17d4450d2e
   languageName: node
   linkType: hard
 
 "contracts.ts@github:qtvhao/contracts.ts":
   version: 1.0.0
-  resolution: "contracts.ts@https://github.com/qtvhao/contracts.ts.git#commit=c14bba9f96f48f60c19558a8f02aceb2dbbf577f"
+  resolution: "contracts.ts@https://github.com/qtvhao/contracts.ts.git#commit=3044408212cd57af2abba82510742cc1762ebcd7"
   dependencies:
     inversify: ^7.5.1
-  checksum: 2a00f7537b70b4cf60cfd921fabe450e82a99c3866d474ffb121c21468603e5022973d594b64f4fc521ef813f95ac2c1005a942ac3c0ffa7244a2506e1ba3379
+  checksum: a29e20f701cfa853dec123e25b6483c4421073d30e555635dcc4507109bf2ad6e7c7792c7dbc48dc0159cdcb292e0e0ac82a01f1045388918ad7bb17d4450d2e
   languageName: node
   linkType: hard
 
