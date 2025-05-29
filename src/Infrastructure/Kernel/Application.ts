@@ -6,8 +6,7 @@ import {
     OptionalGetOptions,
     ServiceIdentifier,
 } from "inversify";
-import { IApplication } from "contracts.ts";
-import { ServiceProvider } from "support.ts";
+import { IApplication, IServiceProvider } from "contracts.ts";
 
 export class Application implements IApplication {
     private container = new Container();
@@ -143,7 +142,7 @@ export class Application implements IApplication {
         return this.debug;
     }
 
-    register(provider: ServiceProvider): void {
+    register(provider: IServiceProvider): void {
         provider.register();
     }
 
@@ -153,7 +152,7 @@ export class Application implements IApplication {
         }
     }
 
-    resolveProvider<T>(provider: ServiceProvider): T {
+    resolveProvider<T>(provider: IServiceProvider): T {
         return provider as unknown as T;
     }
 
